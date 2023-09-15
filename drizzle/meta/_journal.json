@@ -1,0 +1,34 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1694679897602,
+      "tag": "0000_calm_nova",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1694681266443,
+      "tag": "0001_lyrical_nomad",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1694684681896,
+      "tag": "0002_quiet_solo",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1694685365993,
+      "tag": "0003_fast_firebird",
+      "breakpoints": true
+    }
+  ]
+}
