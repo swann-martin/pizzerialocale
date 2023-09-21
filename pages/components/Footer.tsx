@@ -1,5 +1,5 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
 const Footer = ({ title }: { title: string }) => {
   return (
@@ -8,7 +8,7 @@ const Footer = ({ title }: { title: string }) => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex justify-center items-center text-green-600 sm:justify-start">
             <Image
-              src={"/images/logo.png"}
+              src={'/images/logo.avif'}
               width={100}
               height={100}
               className="object-contain"

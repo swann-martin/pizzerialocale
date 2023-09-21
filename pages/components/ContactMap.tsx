@@ -1,12 +1,12 @@
-import React from "react";
-import { Phone } from "../pages/components/Icons";
+import React from 'react';
+import { Phone } from './Icons';
 
 const ContactMap = ({ phone }: { phone: string }) => {
   let mapUrl =
-    "https://www.openstreetmap.org/export/embed.html?bbox=4.381584227085114%2C50.86146273363681%2C4.383638799190522%2C50.86247175309542&amp;layer=mapnik&amp;marker=50.8619672460956%2C4.382611513137817";
-  const street = "Rue des Paquerettes, 122";
-  const city = "Schaerbeek";
-  const postCode = "1030";
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.3337702502745!2d4.3799908765816!3d50.86202037167377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c369825a79f7%3A0x7d07d919fea37490!2sPizzeria%20del%20Parco!5e0!3m2!1sfr!2sbe!4v1695281485579!5m2!1sfr!2sbe';
+  const street = 'Rue des Paquerettes, 122';
+  const city = 'Schaerbeek';
+  const postCode = '1030';
 
   return (
     <section className="px-4 py-8 mx-auto bg-green-600 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
@@ -17,7 +17,7 @@ const ContactMap = ({ phone }: { phone: string }) => {
               width="600"
               height="450"
               src={mapUrl}
-              style={{ border: "1px solid black" }}
+              style={{ border: '1px solid black' }}
             ></iframe>
           </div>
 

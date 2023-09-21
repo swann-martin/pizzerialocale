@@ -1,9 +1,9 @@
-import React from "react";
-import { Phone } from "../pages/components/Icons";
+import React from 'react';
+import { Phone } from './Icons';
 
 const Hero = ({
   phone,
-  children,
+  children
 }: {
   phone: string;
   children: React.ReactNode;
