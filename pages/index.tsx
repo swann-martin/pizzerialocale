@@ -7,7 +7,8 @@ import { Drink, Food, drinkEnum } from '../src/db/schema';
 import Footer from './components/Footer';
 import ContactMap from './components/ContactMap';
 import Hero from './components/Hero';
-import { VegetarianIcon } from './components/Icons';
+import { IconMinus, IconPlus, VegetarianIcon } from './components/Icons';
+import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,6 +23,15 @@ export default function Home({
 }) {
   let phone = '+32 2 215 68 80';
   const title = 'Pizzeria del parco';
+
+  const [openAccordion, setOpenAccordion] = useState<null | number>(0);
+  const handleAccordionClick = (index: number) => {
+    if (index !== openAccordion) {
+      setOpenAccordion(index);
+    } else {
+      setOpenAccordion(null);
+    }
+  };
 
   const NavBar = () => (
     <nav className="fixed right-0 left-2 top-4 z-50 navbar">
@@ -51,9 +61,25 @@ export default function Home({
           <NavBar />
         </Hero>
 
-        <section id="menu" className="bg-white">
-          <h2 className="pt-2 text-3xl font-extrabold text-center">Pizzas</h2>
-          <ul className="flex flex-col gap-4 p-5 mx-auto max-w-screen-xl">
+        <section id="menu" className="mx-auto max-w-screen-xl bg-white">
+          <h2
+            onClick={() => handleAccordionClick(0)}
+            className="flex justify-center items-center pt-2 text-3xl font-extrabold text-center rounded-lg border-none cursor-pointer hover:bg-gray-100"
+          >
+            Pizzas
+            <span>
+              {openAccordion === 0 ? (
+                <IconMinus className="text-green-600" />
+              ) : (
+                <IconPlus className="text-green-600" />
+              )}
+            </span>
+          </h2>
+          <ul
+            className={` ${
+              openAccordion === 0 ? 'flex' : 'hidden'
+            } flex flex-col gap-4 p-5 `}
+          >
             {!!foods?.length &&
               foods?.map((food, index) => (
                 <li
@@ -80,9 +106,25 @@ export default function Home({
                 </li>
               ))}
           </ul>
-          <h2 className="pt-2 text-3xl font-extrabold text-center">Drinks</h2>
+          <h2
+            onClick={() => handleAccordionClick(1)}
+            className="flex justify-center items-center pt-2 text-3xl font-extrabold text-center rounded-lg border-none cursor-pointer hover:bg-gray-100"
+          >
+            Drinks
+            <span>
+              {openAccordion === 1 ? (
+                <IconMinus className="text-green-600" />
+              ) : (
+                <IconPlus className="text-green-600" />
+              )}
+            </span>
+          </h2>
 
-          <ul className="flex flex-col gap-4 p-5 mx-auto max-w-screen-xl">
+          <ul
+            className={` ${
+              openAccordion === 1 ? 'flex' : 'hidden'
+            } flex flex-col gap-4 p-5 `}
+          >
             {!!drinks?.length &&
               drinks?.map((drink, index) => {
                 return (
