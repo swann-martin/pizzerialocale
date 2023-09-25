@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
+import { LogoSwann } from './Icons';
 
 const Footer = ({ title }: { title: string }) => {
+  const swannHref = 'https://www.swannmartin.xyz/';
   return (
     <footer className="bg-gray-50">
       <div className="px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
@@ -16,12 +18,20 @@ const Footer = ({ title }: { title: string }) => {
             />
             <h2 className="text-3xl font-bold">{title}</h2>
           </div>
-
-          <p className="mt-4 text-sm text-center text-gray-500 lg:mt-0 lg:text-right">
-            Copyright &copy;{new Date().getFullYear()}
-            <span className="mx-1">{title}</span>
-            <span> All rights reserved.</span>
-          </p>
+          <div className="flex flex-col gap-4">
+            <p className="mt-4 text-sm text-center text-gray-500 lg:mt-0 lg:text-right">
+              Copyright &copy;{new Date().getFullYear()}
+              <span className="mx-1">{title}</span>
+              <span> All rights reserved.</span>
+            </p>
+            <a
+              href={swannHref}
+              className="flex text-sm text-center text-gray-500 hover:text-green-700 lg:mt-0 lg:text-right"
+            >
+              <LogoSwann />
+              <span className="pl-2">Developped by Swann Martin</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>

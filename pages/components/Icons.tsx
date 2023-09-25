@@ -88,3 +88,126 @@ export function IconPlus(props: { className?: string }) {
     </svg>
   );
 }
+export function IconChevronUp(props: { className?: string }) {
+  return (
+    <svg
+      className={`${props?.className}  w-6 h-6`}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 7C12.2652 7 12.5196 7.10536 12.7071 7.29289L19.7071 14.2929C20.0976 14.6834 20.0976 15.3166 19.7071 15.7071C19.3166 16.0976 18.6834 16.0976 18.2929 15.7071L12 9.41421L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L11.2929 7.29289C11.4804 7.10536 11.7348 7 12 7Z"
+          fill="#000000"
+        ></path>
+      </g>
+    </svg>
+  );
+}
+export function IconChevronDown(props: { className?: string }) {
+  return (
+    <svg
+      className={`${props?.className}  w-6 h-6`}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z"
+          fill="#000000"
+        ></path>
+      </g>
+    </svg>
+  );
+}
+export function LogoSwann(props: { className?: string }) {
+  return (
+    <svg
+      className={`${props?.className}  w-6 h-6`}
+      fill="none"
+      stroke="currentColor"
+      width="50.946941mm"
+      height="50.558044mm"
+      viewBox="0 0 50.946941 50.558044"
+      version="1.1"
+      id="svg5"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns-svg="http://www.w3.org/2000/svg"
+    >
+      <defs id="defs2">
+        <rect
+          x="113.40819"
+          y="84.263794"
+          width="129.89661"
+          height="101.95032"
+          id="rect545"
+        />
+      </defs>
+      <g id="layer1" transform="translate(-21.325995,-10.289868)">
+        <path
+          id="path2240"
+          style={{
+            opacity: 1,
+            fill: 'currentColor',
+            strokeDasharray: 'none',
+            strokeWidth: 0.245679
+          }}
+          d={
+            'm 46.804714,10.289868 -25.473718,12.635516 -0.005,25.279024 25.468215,12.643501 25.473726,-12.63596 0.005,-25.27858 z m 0.0985,3.322674 L 68.97808,24.650145 68.97068,46.72283 46.88842,57.757913 24.813555,46.72031 l 0.0074,-22.072685 z'
+          }
+        />
+        <text
+          xmlSpace="preserve"
+          transform="matrix(0.57044775,0,0,0.38041397,-55.228994,-12.699845)"
+          id="text543"
+          style={{
+            fontStyle: 'normal',
+            fontVariant: 'normal',
+            fontWeight: 'normal',
+            fontStretch: 'normal',
+            fontSize: '74.6667px',
+            fontFamily: 'Pagul',
+            textAlign: 'center',
+            whiteSpace: 'pre',
+            // shapeInside: 'url(#rect545)',
+            fill: 'currentColor',
+            strokeWidth: 1.00157
+          }}
+        >
+          <tspan x="153.45511" y="153.33037" id="tspan2">
+            <tspan
+              style={{
+                fontFamily: 'FreeSans'
+              }}
+              id="tspan1"
+            >
+              S
+            </tspan>
+          </tspan>
+        </text>
+      </g>
+    </svg>
+  );
+}

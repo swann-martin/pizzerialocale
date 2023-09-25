@@ -1,5 +1,5 @@
 DO $$ BEGIN
- CREATE TYPE "typeDrink" AS ENUM('Vin Blanc', 'Vin Rosé', 'Sans alcool', 'Liqueur', 'Bière', 'Apéritif');
+ CREATE TYPE "typeDrink" AS ENUM('Vin Blanc', 'Vin Rosé', 'Vin Rouge', 'Sans alcool', 'Liqueur', 'Bière', 'Apéritif');
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50.946941mm"
+   height="50.558044mm"
+   viewBox="0 0 50.946941 50.558044"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <rect
+       x="113.40819"
+       y="84.263794"
+       width="129.89661"
+       height="101.95032"
+       id="rect545" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-21.325995,-10.289868)">
+    <path
+       id="path2240"
+       style="opacity:1;fill:#ffffff;stroke-width:0.245679;stroke-dasharray:none"
+       d="m 46.804714,10.289868 -25.473718,12.635516 -0.005,25.279024 25.468215,12.643501 25.473726,-12.63596 0.005,-25.27858 z m 0.0985,3.322674 L 68.97808,24.650145 68.97068,46.72283 46.88842,57.757913 24.813555,46.72031 l 0.0074,-22.072685 z" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.57044775,0,0,0.38041397,-55.228994,-12.699845)"
+       id="text543"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:74.6667px;font-family:Pagul;-inkscape-font-specification:Pagul;text-align:center;white-space:pre;shape-inside:url(#rect545);fill:#ffffff;stroke-width:1.00157"><tspan
+         x="153.45511"
+         y="153.33037"
+         id="tspan2"><tspan
+           style="font-family:FreeSans;-inkscape-font-specification:FreeSans"
+           id="tspan1">S</tspan></tspan></text>
+  </g>
+</svg>

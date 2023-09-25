@@ -29,7 +29,7 @@ const ContactMap = ({ phone }: { phone: string }) => {
             <p className="mt-4 text-gray-200">
               Ouvert du mardi au dimanche de 12h à 14h et de 18h à 22h
             </p>
-            <p className="mt-4 text-gray-200">Rue des Paquerettes, 122</p>
+            <p className="mt-4 text-gray-200">{street}</p>
             <p className="mt-2 text-gray-200">
               <span>{postCode}</span> {city}
             </p>
