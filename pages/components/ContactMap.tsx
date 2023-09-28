@@ -27,7 +27,8 @@ const ContactMap = ({ phone }: { phone: string }) => {
             </h2>
 
             <p className="mt-4 text-gray-200">
-              Ouvert du mardi au dimanche de 12h à 14h et de 18h à 22h
+              Ouvert du mardi au dimanche de{' '}
+              <span className="font-bold">12h à 14h et de 18h à 22h</span>
             </p>
             <p className="mt-4 text-gray-200">{street}</p>
             <p className="mt-2 text-gray-200">
