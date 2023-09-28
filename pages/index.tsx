@@ -4,12 +4,12 @@ import { Inter } from '@next/font/google';
 import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import { Drink, Food } from '../src/db/schema';
-import Footer from './components/Footer';
-import ContactMap from './components/ContactMap';
-import Hero from './components/Hero';
+import Footer from '../components/Footer';
+import ContactMap from '../components/ContactMap';
+import Hero from '../components/Hero';
 import { useState } from 'react';
-import FoodMenuItem from './components/FoodMenuItem';
-import DrinkMenuItem from './components/DrinkMenuItem';
+import FoodMenuItem from '../components/FoodMenuItem';
+import DrinkMenuItem from '../components/DrinkMenuItem';
 
 const inter = Inter({ subsets: ['latin'] });
 
