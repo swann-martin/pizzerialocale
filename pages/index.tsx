@@ -107,7 +107,9 @@ export default function Home({
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const url = !!process.env.URL ? process.env?.URL : 'http://localhost:3000';
+    const url = !!process.env.URL
+      ? process.env?.URL
+      : 'https://pizzerialocale.vercel.app/';
 
     const query = await fetch(new URL('/api/foods', url));
     const data = await query.json();
