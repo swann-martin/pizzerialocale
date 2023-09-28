@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Drink } from '../../src/db/schema';
 import { IconChevronDown, IconChevronUp } from './Icons';
+import { Drink } from '../src/db/schema';
 
 export default function DrinkMenuItem({
   index,

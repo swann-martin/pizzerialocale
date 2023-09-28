@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Food } from '../../src/db/schema';
 import { IconChevronDown, IconChevronUp, VegetarianIcon } from './Icons';
+import { Food } from '../src/db/schema';
 
 export default function FoodMenuItem({
   index,
