@@ -30,7 +30,7 @@ export default function Home({
   const dessertsString = 'desserts';
   const patesString = 'pâtes';
 
-  const [openAccordion, setOpenAccordion] = useState<null | number>(0);
+  const [openAccordion, setOpenAccordion] = useState<null | number>(null);
   const handleAccordionClick = (index: number) => {
     if (index !== openAccordion) {
       setOpenAccordion(index);
