@@ -13,7 +13,7 @@ const Footer = ({ title }: { title: string }) => {
               src={'/images/logo.avif'}
               width={100}
               height={100}
-              className="object-contain"
+              className="object-contain w-10 h-10"
               alt="pizzeria-del-parco"
             />
             <h2 className="text-3xl font-bold">{title}</h2>

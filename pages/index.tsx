@@ -52,9 +52,19 @@ export default function Home({
     { foods: desserts, title: dessertsString }
   ];
 
+  const ingredientsFilter = [
+    'champignons',
+    'jambon',
+    'mozzarella',
+    'viande'
+  ].sort();
+
   const NavBar = () => (
     <nav className="fixed right-0 left-2 top-4 z-50 navbar">
-      <Link href={{ pathname: '/' }} className="flex items-center w-16 h-16">
+      <Link
+        href={{ pathname: '/' }}
+        className="flex items-center w-10 h-10 md:w-12 md:h-12"
+      >
         <Image
           src={'/images/logo.avif'}
           width={100}
@@ -91,7 +101,7 @@ export default function Home({
               key={title + index}
               foods={foods}
               title={title}
-              ingredients={ingredients}
+              ingredients={ingredientsFilter}
               index={index + 1}
               openAccordion={openAccordion}
               handleAccordionClick={handleAccordionClick}

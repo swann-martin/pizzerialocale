@@ -8,6 +8,7 @@ const Hero = ({
   phone: string;
   children: React.ReactNode;
 }) => {
+  const caption = 'Les meilleures pizzas de Schaerbeek !';
   return (
     <header>
       <section className="relative bg-[url(https://images.unsplash.com/photo-1600628421066-f6bda6a7b976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)] bg-cover bg-center bg-no-repeat">
@@ -23,7 +24,7 @@ const Hero = ({
             </h1>
 
             <p className="mt-4 max-w-lg text-white sm:text-xl/relaxed">
-              The best pizzas in Schaerbeek
+              {caption}
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8 text-center">
