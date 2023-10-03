@@ -9,11 +9,12 @@ const ContactMap = ({ phone }: { phone: string }) => {
   const postCode = '1030';
 
   return (
-    <section className="px-4 py-8 mx-auto bg-green-600 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+    <section className="px-4 py-8 mx-auto bg-green-700 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
       <div className="px-4 py-8 mx-auto max-w-screen-xl text-white sm:py-12 sm:px-6 lg:py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden relative h-64 rounded-lg sm:h-80 lg:order-last lg:h-full">
             <iframe
+              title="carte d'acces de la pizzeria"
               width="600"
               height="450"
               src={mapUrl}
@@ -26,18 +27,18 @@ const ContactMap = ({ phone }: { phone: string }) => {
               Venez manger chez nous
             </h2>
 
-            <p className="mt-4 text-gray-200">
+            <p className="mt-4 text-white">
               Ouvert du mardi au dimanche de{' '}
               <span className="font-bold">12h à 14h et de 18h à 22h</span>
             </p>
-            <p className="mt-4 text-gray-200">{street}</p>
-            <p className="mt-2 text-gray-200">
+            <p className="mt-4 text-white">{street}</p>
+            <p className="mt-2 text-white">
               <span>{postCode}</span> {city}
             </p>
             <div className="pt-4">
               <a
                 href={`tel:${phone}`}
-                className="flex justify-center px-12 py-3 text-sm font-medium text-center text-white bg-green-600 rounded border border-white transition sm:inline-block sm:w-auto hover:bg-green-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                className="flex justify-center px-12 py-3 text-sm font-medium text-center text-white bg-green-700 rounded border border-white transition sm:inline-block sm:w-auto hover:bg-green-800 focus:outline-none focus:ring focus:ring-yellow-400"
               >
                 <div className="flex items-center">
                   <Phone className="w-5 h-5" />

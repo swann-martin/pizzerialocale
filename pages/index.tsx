@@ -84,11 +84,6 @@ export default function Home({
           name="description"
           content="Pizzeria del parco, the best pizzas in Schaerbeek, call us to order your pizza at +32 2 215 68 80'"
         />
-        <meta
-          property="og:image"
-          content="https://pizzerialocale.vercel.app/images/pizzerialocaleOg.avif"
-        />
-        <link rel="icon" href="/images/logo.avif" />
       </Head>
       <main className="main">
         <Hero phone={phone}>

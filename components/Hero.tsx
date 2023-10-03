@@ -9,9 +9,14 @@ const Hero = ({
   children: React.ReactNode;
 }) => {
   const caption = 'Les meilleures pizzas de Schaerbeek !';
+  const urlLocal = '';
+  const urlImage =
+    'https://images.unsplash.com/photo-1600628421066-f6bda6a7b976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
   return (
     <header>
-      <section className="relative bg-[url(https://images.unsplash.com/photo-1600628421066-f6bda6a7b976?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)] bg-cover bg-center bg-no-repeat">
+      <section
+        className={`relative bg-center bg-no-repeat bg-cover custom-bg-class`}
+      >
         <div className="absolute inset-0 bg-gray-100/25 sm:bg-transparent sm:from-white/95 sm:to-white/25 lg:from-white/95"></div>
         {children}
         <div className="relative px-4 py-32 mx-auto max-w-screen-xl sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
@@ -30,13 +35,13 @@ const Hero = ({
             <div className="flex flex-wrap gap-4 mt-8 text-center">
               <a
                 href="#menu"
-                className="block px-12 py-3 w-full text-sm font-medium text-white bg-green-600 rounded shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
+                className="block px-12 py-3 w-full text-sm font-medium text-white bg-green-700 rounded shadow hover:bg-green-800 focus:outline-none focus:ring active:bg-green-700 sm:w-auto"
               >
                 Menu
               </a>
               <a
                 href={`tel:${phone}`}
-                className="flex justify-center px-12 py-3 w-full text-sm font-medium text-white bg-green-600 rounded shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
+                className="flex justify-center px-12 py-3 w-full text-sm font-medium text-white bg-green-700 rounded shadow hover:bg-green-800 focus:outline-none focus:ring active:bg-green-700 sm:w-auto"
               >
                 <Phone className="w-5 h-5" />
                 <span className="pl-2">{phone}</span>

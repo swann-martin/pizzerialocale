@@ -29,8 +29,12 @@ export default function FoodMenuItem({
 
   const handleFilterFood = (el: string) => {
     if (foodIngredientSelector?.includes(el)) {
-      setFoodIngredientSelector('');
       setFilteredFoods(foods);
+      setFoodIngredientSelector(el);
+    } else if (el.includes('vég') || el.includes('veg')) {
+      let newFood = foodIngredientSelector;
+      setFoodIngredientSelector(el);
+      setFilteredFoods(foods.filter((foods) => foods.veg));
     } else {
       let newFood = foodIngredientSelector;
       setFoodIngredientSelector(el);
@@ -64,7 +68,7 @@ export default function FoodMenuItem({
       >
         {/* Ingredients selectors  */}
         {!!ingredients?.length && (
-          <div className="grid grid-cols-2 gap-2 pt-2 sm:grid-cols-8">
+          <li className="grid grid-cols-2 gap-2 pt-2 sm:grid-cols-8">
             <SearchBar
               valueString={foodIngredientSelector}
               filterByValueFunction={handleFilterFood}
@@ -76,7 +80,7 @@ export default function FoodMenuItem({
                   onClick={() => handleFilterFood(el)}
                   className={`p-2 text-center text-sm text-white rounded-lg cursor-pointer hover:bg-green-700 ${
                     foodIngredientSelector === el
-                      ? 'bg-green-600 active:bg-green-700 '
+                      ? 'bg-green-700 active:bg-green-700 '
                       : 'bg-slate-500'
                   } `}
                   key={el + index}
@@ -98,24 +102,24 @@ export default function FoodMenuItem({
             {/* Vegetarian selector  */}
             <h4
               onClick={() => {
-                if (foodIngredientSelector === 'Vegetarian') {
+                if (foodIngredientSelector === 'végétarian') {
                   setFoodIngredientSelector('');
                   setFilteredFoods(foods);
                 } else {
-                  setFoodIngredientSelector('Vegetarian');
+                  setFoodIngredientSelector('végétarien');
                   setFilteredFoods(foods.filter((el) => el?.veg));
                 }
               }}
               className={`p-2 flex justify-center  text-sm text-white rounded-lg cursor-pointer hover:bg-green-700 active:bg-green-700 ${
-                foodIngredientSelector === 'Vegetarian'
-                  ? 'bg-green-600'
+                foodIngredientSelector === 'végétarien'
+                  ? 'bg-green-700'
                   : 'bg-slate-500'
               } `}
             >
               <VegetarianIcon />
-              <span className="pl-2">Végétarien</span>
+              <span className="pl-2">végétarien</span>
             </h4>
-          </div>
+          </li>
         )}
         {!!filteredFoods?.length &&
           filteredFoods?.map((food, index) => (
@@ -133,7 +137,7 @@ export default function FoodMenuItem({
                   {food?.veg && (
                     <p
                       className="text-green-600 text-extrabold"
-                      title="Vegetarian"
+                      title="végétarien"
                     >
                       <VegetarianIcon className="color-green-600" />
                     </p>
