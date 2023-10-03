@@ -17,7 +17,7 @@ const SearchBar = ({
       <input
         type="text"
         placeholder="Recherche"
-        value={valueString}
+        value={valueString.toLocaleLowerCase()}
         onChange={(e) => filterByValueFunction(e.target.value)}
         className="pl-2 bg-transparent outline-none"
       />
