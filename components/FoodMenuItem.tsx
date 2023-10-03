@@ -6,6 +6,7 @@ import {
   VegetarianIcon
 } from './Icons';
 import { Food } from '../src/db/schema';
+import SearchBar from './SearchBar';
 
 export default function FoodMenuItem({
   index,
@@ -28,7 +29,6 @@ export default function FoodMenuItem({
 
   const handleFilterFood = (el: string) => {
     if (foodIngredientSelector?.includes(el)) {
-      console.log(el, foodIngredientSelector);
       setFoodIngredientSelector('');
       setFilteredFoods(foods);
     } else {
@@ -65,13 +65,18 @@ export default function FoodMenuItem({
         {/* Ingredients selectors  */}
         {!!ingredients?.length && (
           <div className="grid grid-cols-2 gap-2 pt-2 sm:grid-cols-8">
+            <SearchBar
+              valueString={foodIngredientSelector}
+              filterByValueFunction={handleFilterFood}
+            />
+
             {ingredients?.map((el: string, index: number) => {
               return (
                 <h4
                   onClick={() => handleFilterFood(el)}
-                  className={`p-2 text-center text-sm text-white rounded-lg cursor-pointer hover:bg-green-700 active:bg-green-700 ${
+                  className={`p-2 text-center text-sm text-white rounded-lg cursor-pointer hover:bg-green-700 ${
                     foodIngredientSelector === el
-                      ? 'bg-green-600'
+                      ? 'bg-green-600 active:bg-green-700 '
                       : 'bg-slate-500'
                   } `}
                   key={el + index}
@@ -110,16 +115,6 @@ export default function FoodMenuItem({
               <VegetarianIcon />
               <span className="pl-2">Végétarien</span>
             </h4>
-            <div className="flex col-span-2 justify-between items-center p-2 text-sm text-center text-white rounded-lg cursor-pointer hover:bg-green-700 active:bg-green-700 bg-slate-500">
-              <input
-                type="text"
-                placeholder="Recherche"
-                value={foodIngredientSelector}
-                onChange={(e) => handleFilterFood(e.target.value)}
-                className="pl-2 bg-transparent outline-none"
-              />
-              <IconSearch className="text-white" />
-            </div>
           </div>
         )}
         {!!filteredFoods?.length &&

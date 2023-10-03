@@ -30,7 +30,7 @@ export default function Home({
   const dessertsString = 'desserts';
   const patesString = 'pâtes';
 
-  const [openAccordion, setOpenAccordion] = useState<null | number>(null);
+  const [openAccordion, setOpenAccordion] = useState<null | number>(1);
   const handleAccordionClick = (index: number) => {
     if (index !== openAccordion) {
       setOpenAccordion(index);
@@ -43,7 +43,7 @@ export default function Home({
     (el) => el.type.toLowerCase() === dessertsString
   );
   const pizzas = foods?.filter((el) => el.type.toLowerCase() === pizzasString);
-  console.log(pizzas);
+
   const pates = foods?.filter((el) => el.type.toLowerCase() === patesString);
 
   const foodsItems = [
@@ -96,12 +96,12 @@ export default function Home({
         </Hero>
 
         <section id="menu" className="py-3 mx-auto max-w-screen-xl bg-white">
-          {foodsItems.map(({ foods, title, ingredients }, index) => (
+          {foodsItems.map(({ foods, title }, index) => (
             <FoodMenuItem
               key={title + index}
               foods={foods}
               title={title}
-              ingredients={ingredientsFilter}
+              ingredients={index === 0 ? ingredientsFilter : []}
               index={index + 1}
               openAccordion={openAccordion}
               handleAccordionClick={handleAccordionClick}

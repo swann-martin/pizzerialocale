@@ -161,7 +161,7 @@ export function IconSearch(props: { className?: string }) {
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        <g clip-path="url(#clip0_15_152)">
+        <g clipPath="url(#clip0_15_152)">
           <circle
             cx="10.5"
             cy="10.5"
