@@ -64,7 +64,7 @@ export default function FoodMenuItem({
       >
         {/* Ingredients selectors  */}
         {!!ingredients?.length && (
-          <div className="grid grid-cols-2 gap-2 pt-2 sm:grid-cols-8">
+          <li className="grid grid-cols-2 gap-2 pt-2 sm:grid-cols-8">
             <SearchBar
               valueString={foodIngredientSelector}
               filterByValueFunction={handleFilterFood}
@@ -76,7 +76,7 @@ export default function FoodMenuItem({
                   onClick={() => handleFilterFood(el)}
                   className={`p-2 text-center text-sm text-white rounded-lg cursor-pointer hover:bg-green-700 ${
                     foodIngredientSelector === el
-                      ? 'bg-green-600 active:bg-green-700 '
+                      ? 'bg-green-700 active:bg-green-700 '
                       : 'bg-slate-500'
                   } `}
                   key={el + index}
@@ -108,14 +108,14 @@ export default function FoodMenuItem({
               }}
               className={`p-2 flex justify-center  text-sm text-white rounded-lg cursor-pointer hover:bg-green-700 active:bg-green-700 ${
                 foodIngredientSelector === 'Vegetarian'
-                  ? 'bg-green-600'
+                  ? 'bg-green-700'
                   : 'bg-slate-500'
               } `}
             >
               <VegetarianIcon />
               <span className="pl-2">Végétarien</span>
             </h4>
-          </div>
+          </li>
         )}
         {!!filteredFoods?.length &&
           filteredFoods?.map((food, index) => (

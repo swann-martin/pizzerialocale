@@ -51,7 +51,7 @@ export default function DrinkMenuItem({
           openAccordion === index ? 'flex' : 'hidden'
         } flex flex-col gap-4 p-5 `}
       >
-        <div className="grid grid-cols-2 gap-2 pt-2 text-sm sm:grid-cols-8">
+        <li className="grid grid-cols-2 gap-2 pt-2 text-sm sm:grid-cols-8">
           {drinkTypes?.map((drinkType, index) => {
             return (
               <h4
@@ -74,7 +74,7 @@ export default function DrinkMenuItem({
                 }}
                 className={`p-2 text-center text-white rounded-lg cursor-pointer hover:bg-green-700 active:bg-green-700 ${
                   drinkTypeSelector == drinkType
-                    ? 'bg-green-600'
+                    ? 'bg-green-700'
                     : 'bg-slate-500'
                 } `}
                 key={drinkType}
@@ -83,7 +83,7 @@ export default function DrinkMenuItem({
               </h4>
             );
           })}
-        </div>
+        </li>
         {!!filteredDrinks?.length &&
           filteredDrinks?.map((drink, index) => {
             return (
